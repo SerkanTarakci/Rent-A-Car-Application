@@ -15,15 +15,21 @@ This is a demo project created using layered architecture that I made for learni
 * The packages below were added to **Core** layer via **NuGet Package Manager**.
 
      📦 Microsoft.EntityFrameworkCore.SqlServer (3.1.11)
+     
      📦 Autofac (6.1.0)
+     
      📦 Autofac.Extensions.DependencyInjection (7.1.0)
+     
      📦 Autofac.Extras.DynamicProxy (6.0.0)
+     
      📦 FluentValidation (9.5.1)
 
 * The packages below were added to **Business** layer via **NuGet Package Manager**.
 
      📦 Autofac (6.1.0)
+     
      📦 Autofac.Extras.DynamicProxy (6.0.0)
+     
      📦 FluentValidation (9.5.1)
 
 * The package below was added to **WebApi** layer via **NuGet Package Manager**.
