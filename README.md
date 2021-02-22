@@ -9,6 +9,7 @@ This is a demo project created using layered architecture that I made for learni
 * The packages below were added to **DataAccess** layer via **NuGet Package Manager**.
 
      📦 Microsoft.EntityFrameworkCore (3.1.11)
+
      📦 Microsoft.EntityFrameworkCore.SqlServer (3.1.11)
 
 * The packages below were added to **Core** layer via **NuGet Package Manager**.
