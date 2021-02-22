@@ -1,7 +1,7 @@
-# Rent-A-Car-Application
-blabla
+# Rent A Car Application
+This is a demo project created using layered architecture that I made for learning purposes during [software developer breeding camp](https://www.kodlama.io/p/yazilim-gelistirici-yetistirme-kampi). With this application you can simulate a car rental system like adding, deleting, updating and listing cars, brands, colors and customers.
 ## Introduction
-* This is a simple **Windows Forms** application. **Northwind** database for **SQL Server** is being used.
+* This is a simple console application. **Northwind** database for **SQL Server** is being used.
 * **Entity Framework** is being used.
 * There are **Business**, **DataAccess**, **Entities** and **WebFormsUI** layers.
 ## Insallation & Usage
