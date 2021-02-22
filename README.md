@@ -1,15 +1,34 @@
 # Rent A Car Application
 This is a demo project created using layered architecture that I made for learning purposes during [software developer breeding camp](https://www.kodlama.io/p/yazilim-gelistirici-yetistirme-kampi). With this application you can simulate a car rental system like adding, deleting, updating and listing cars, brands, colors and customers.
 ## Introduction
-* This is a simple console application. **Northwind** database for **SQL Server** is being used.
+* This is a simple console application. RentACar database that we created is being used.
 * **Entity Framework** is being used.
-* There are **Business**, **DataAccess**, **Entities** and **WebFormsUI** layers.
+* There are **Business**, **ConsoleUI**, **Core**, **DataAccess**, **Entities** and **WebApi** layers.
 ## Insallation & Usage
-* Northwind database query can be accessed via [this link](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).
-* **EntityFramework.6.2.0** package was added to **Northwind.DataAccess** and **Northwind.WebFormsUI** layers via **NuGet Package Manager**.
-* **FluentValidation** package was added to **Northwind.Business** layer via **NuGet Package Manager**.
-* **Ninject** package was added to **Northwind.Business** and **Northwind.WebFormsUI** layers via **NuGet Package Manager**.
-* Set Northwind.WebFormsUI Startup Project.
+* Database query can be accessed via [this link](https://github.com/SerkanTarakci/Rent-A-Car-Application/tree/master/SqlQueries).
+* The packages below were added to **DataAccess** layer via **NuGet Package Manager**.
+
+     📦 Microsoft.EntityFrameworkCore (3.1.11)
+     📦 Microsoft.EntityFrameworkCore.SqlServer (3.1.11)
+
+* The packages below were added to **Core** layer via **NuGet Package Manager**.
+
+     📦 Microsoft.EntityFrameworkCore.SqlServer (3.1.11)
+     📦 Autofac (6.1.0)
+     📦 Autofac.Extensions.DependencyInjection (7.1.0)
+     📦 Autofac.Extras.DynamicProxy (6.0.0)
+     📦 FluentValidation (9.5.1)
+
+* The packages below were added to **Business** layer via **NuGet Package Manager**.
+
+     📦 Autofac (6.1.0)
+     📦 Autofac.Extras.DynamicProxy (6.0.0)
+     📦 FluentValidation (9.5.1)
+
+* The package below was added to **WebApi** layer via **NuGet Package Manager**.
+
+     📦 Autofac.Extensions.DependencyInjection (7.1.0)
+
 ## Layers
 🗃 Business
 
