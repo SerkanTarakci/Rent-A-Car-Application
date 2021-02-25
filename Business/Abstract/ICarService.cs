@@ -18,7 +18,6 @@ namespace Business.Abstract
         IDataResult<List<CarDetailDto>> GetCarDetails(Expression<Func<Car, bool>> filter = null);
 
         IResult Add(Car car);
-        //soru şu.. ICarServicenin Add'i aslında ICarDal'ın Addini çağırıyor ...amaç bu yani oradaki add ile buradaki add aynı şey değil.
         IResult Update(Car car);
         IResult Delete(Car car);
 

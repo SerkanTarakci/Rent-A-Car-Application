@@ -18,32 +18,15 @@ namespace Business.Concrete
 {
     public class CarManager : ICarService
     {
-        //Bir iş sınıfı başka sınıfları newlemesin. Bunun için injection yapıyoruz. _altçizgili şeyler gibi...
+        //Bir iş sınıfı başka sınıfları newlemesin. Bunun için injection yapıyoruz. 
         ICarDal _carDal;
-
         public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
         }
-
-        //private bool checkData(Car car)
-        //{
-        //    bool value = true;
-
-        //    if (car.Description.Length < 2)
-        //        value = false;
-
-        //    if (car.DailyPrice == 0)
-        //        value = false;
-
-        //    return value;
-        //}
         public IDataResult<List<Car>> GetAll()
         {
-            //İş kodları
-            //Burayı geçiyosa data accessi çağıracak
 
-            //kodlar var işte burada mesela yetkisi var mı?...blabla
             return new SuccessDataResult<List<Car>>(_carDal.GetAll());
 
         }
@@ -55,41 +38,33 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == brandId));
         }
-
         public IDataResult<List<Car>> GetCarsByColorId(int colorId)
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == colorId));
 
         }
-        
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             //business codes
             //validation
-
             _carDal.Add(car);
             return new SuccessResult(Messages.CarAdded);
         }
-
         public IResult Update(Car car)
         {
             _carDal.Update(car);
             return new SuccessResult(Messages.CarUpdated);
         }
-
         public IResult Delete(Car car)
         {
             _carDal.Update(car);
             return new SuccessResult(Messages.CarDeleted);
         }
-
         public IDataResult<List<CarDetailDto>> GetCarDetails(Expression<Func<Car, bool>> filter = null)
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(filter));
-
         }
-
         //bu sayede ne in memory ne entity ismi geçecek...
     }
 }

@@ -1,4 +1,4 @@
-using Business.Abstract;
+﻿using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
@@ -42,6 +42,7 @@ namespace WebApi
             services.AddSingleton<IRentalDal, EfRentalDal>();
             services.AddSingleton<IUserService, UserManager>();
             services.AddSingleton<IUserDal, EfUserDal>();
+            //bunlara artık gerek yok çünkü autofac kullanacağız
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
